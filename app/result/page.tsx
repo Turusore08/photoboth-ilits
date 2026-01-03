@@ -4,7 +4,7 @@ import { usePurikuraStore } from "@/lib/store"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Download, ArrowLeft, Share2, Sparkles } from "lucide-react"
-import { QRCodeSVG } from "qrcode.react"
+// import { QRCodeSVG } from "qrcode.react" <-- Baris ini dihapus (Unused dependency)
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 
@@ -50,7 +50,15 @@ export default function ResultPage() {
           <div className="flex flex-col gap-6 items-center md:items-start w-full max-w-sm">
             <Card className="p-8 border-4 border-purikura-pink/10 shadow-xl bg-white flex flex-col items-center gap-4 w-full">
               <div className="bg-purikura-pink/5 p-4 rounded-2xl">
-                <QRCodeSVG value={finalImage.slice(0, 1000)} size={200} />
+                {/* MODIFICATION NOTE:
+                  Mengganti QRCodeSVG dinamis dengan aset statis.
+                  Pastikan 'qrcode.png' ada di folder /public.
+                */}
+                <img 
+                  src="/images/qrcode.png" 
+                  alt="Scan QR Code" 
+                  className="w-[200px] h-[200px] object-contain"
+                />
               </div>
               <p className="text-sm font-bold text-purikura-pink tracking-widest uppercase">Scan to save</p>
             </Card>

@@ -24,9 +24,9 @@ export const FRAMES: FrameConfig[] = [
     name: "Calon Anak ITS",
     url: "/images/calon-20anak-20its.png",
     slots: [
-      { x: 50, y: 150, width: 500, height: 450 },
-      { x: 50, y: 650, width: 500, height: 450 },
-      { x: 50, y: 1150, width: 500, height: 450 },
+      { x: 72, y: 70, width: 460, height: 450 }, // Slot 1 (Atas)
+      { x: 72, y: 560, width: 460, height: 450 }, // Slot 2 (Tengah)
+      { x: 72, y: 1050, width: 460, height: 450 }, // Slot 3 (Bawah)
     ],
   },
 ];
