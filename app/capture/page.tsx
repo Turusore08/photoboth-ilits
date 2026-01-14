@@ -181,11 +181,17 @@ export default function CapturePage() {
             </div>
           </div>
 
-          <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white mb-6">
+          <div className="relative aspect-square bg-black rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white mb-6 max-w-[500px] mx-auto">
             <Webcam
               audio={false}
               ref={webcamRef}
               screenshotFormat="image/jpeg"
+              width={720}
+              height={720}
+              videoConstraints={{
+                facingMode: "user",
+                aspectRatio: 1, // Meminta hardware/browser untuk mengutamakan rasio 1:1
+              }}
               className="w-full h-full object-cover"
             />
           </div>
